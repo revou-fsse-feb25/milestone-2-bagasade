@@ -20,7 +20,7 @@ I have made three games in this website using html, css and javascript. Let's fi
 
 ## 🎮 Live Demo
 
-> [🔗 Live Demo](https://https://revou-fsse-feb25.github.io/milestone-2-bagasade/)
+> [🔗 Live Demo](https://revou-fsse-feb25.github.io/milestone-2-bagasade/)
 
 ---
 
