@@ -1,0 +1,129 @@
+:root {
+    --darkblue: #146c94;
+    --blueocean: #19a7ce;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--blueocean);
+    color: #fff;
+    min-height: 2000px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color:#0b3f57;
+    border-bottom: 1px solid var(--blueocean);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.navbar .navbar-logo span {
+    color: var(--blueocean);
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0.1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: #19a7ce;
+
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--blueocean);
+    transform: scaleX(0);
+    transition: 0.2s;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(00.5);
+}
+
+#welcome {
+    margin-top: 8rem;
+    text-align: center;
+    color: #0b3f57;
+    font-size: 2.5rem;
+    font-weight: 750;
+}
+
+#levelup {
+    margin-top: 10px;
+    text-align: center;
+    color: yellow;
+    font-size: 1rem;
+}
+
+.box {
+    margin: 6rem auto;
+    border-radius: 20px;
+    background-color: white;
+    height: 15rem;
+    width:350px;
+}
+
+.box:hover {
+    background-color:#0b3f57;
+}
+
+h4 {
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.5rem ;
+    text-align: center;
+    background-color: #0b3f57;
+    border-radius: 20px;
+}
+
+#scisor {
+    border-radius: 20px;
+    height: 10rem;
+    margin-left: 2.3rem;
+}
+#memory {
+    border-radius: 20px;
+    height: 10rem;
+    margin-left: 2rem;
+}
+
+#number {
+    border-radius: 20px;
+    height: 10rem;
+    margin-left: 3.4rem;
+}
+

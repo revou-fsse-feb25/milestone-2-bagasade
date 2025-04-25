@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="/css/number.css">
+</head>
+<body>
+      <!-- Navbar Start -->
+      <nav class="navbar">
+        <a href="../index.html" class="navbar-logo">Revo<span>Fun</span></a>
+
+        <div class="navbar-nav">
+            <a href="../index.html">Home</a>
+        </div>
+     </nav>
+     <!-- Navbar End -->
+
+  <div class="game-container">
+    <h1>Number Guessing Game</h1>
+    <p>Guess a number between 1 and 100</p>
+    <input type="number" id="guess-input" placeholder="Enter your guess" />
+    <button id="submit-btn">Guess</button>
+    <p class="message"></p>
+    <p>Attempts Left: <span id="attempts">5</span></p>
+    <button id="restart-btn" style="display:none;">Play Again</button>
+  </div>
+  <script src="/js/number.js"></script>
+</body>
+</html>

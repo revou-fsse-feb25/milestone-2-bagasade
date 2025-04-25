@@ -1,0 +1,112 @@
+:root {
+  --darkblue: #146c94;
+  --blueocean: #19a7ce;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--blueocean);
+  color: #fff;
+  min-height: 2000px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color:#0b3f57;
+  border-bottom: 1px solid var(--blueocean);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .navbar-logo span {
+  color: var(--blueocean);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0.1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #19a7ce;
+
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--blueocean);
+  transform: scaleX(0);
+  transition: 0.2s;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(00.5);
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .card {
+    width: 100px;
+    height: 100px;
+    background: #0b3f57;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .card.flipped {
+    background: white;
+    color: black;
+    cursor: default;
+  }
+
+  h1 {
+    margin-top: 100px;
+    font-size: 2.5rem;
+  }
+  
