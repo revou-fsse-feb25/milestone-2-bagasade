@@ -50,6 +50,7 @@ cards.forEach(symbol => {
   });
 });
 
+
 function resetTurn() {
   firstCard = null;
   secondCard = null;
