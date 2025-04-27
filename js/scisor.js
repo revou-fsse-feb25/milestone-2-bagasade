@@ -1,69 +1,69 @@
 //Ambil random komputer
-function getPilihanComputer() {
+function getComputerChoice() {
     const comp = Math.random();
-    if(comp < 0.34) return 'batu';
-    if(comp >= 0.34 && comp < 0.67) return 'gunting';
-    return 'kertas';
+    if(comp < 0.34) return 'rock';
+    if(comp >= 0.34 && comp < 0.67) return 'scissor';
+    return 'paper';
 }
 
 
 //atur rule nya
-function getHasil(comp, player) {
+function getResult(comp, player) {
     if(player == comp)return 'DRAW';
-    let hasil = '';
+    let result = '';
     switch(player){
-        case 'batu':
+        case 'rock':
             switch(comp) {
-                case 'kertas':
-                    hasil = 'LOSE';
+                case 'paper':
+                    result = 'LOSE';
                     break;
-                case 'gunting':
-                    hasil = 'WIN';
+                case 'scissor':
+                    result = 'WIN';
                     break;
             }
     }
 
     switch(player) {
-        case 'kertas':
+        case 'paper':
             switch(comp) {
-                case 'batu':
-                    hasil = 'WIN';
+                case 'rock':
+                    result = 'WIN';
                     break;
-                case 'gunting':
-                    hasil = 'LOSE';
+                case 'scissor':
+                    result = 'LOSE';
                     break;
             }
     }
 
     switch(player) {
-        case 'gunting':
+        case 'scissor':
             switch(comp) {
-                case 'batu':
-                    hasil = 'LOSE';
+                case 'rock':
+                    result = 'LOSE';
                     break;
-                case 'kertas':
-                    hasil = 'WIN';
+                case 'paper':
+                    result = 'WIN';
                     break;
             }
             break;
     }
-    return hasil;
+    return result;
 }
-//     if(player == 'batu') return (comp == 'gunting')?'WIN':'LOSE';
-//     if(player == 'kertas') return (comp == 'batu')?'WIN':'LOSE';
-//     if(player == 'gunting') return (comp == 'batu')?'LOSE':'WIN';
+//     if(player == 'rock') return (comp == 'scissor')?'WIN':'LOSE';
+//     if(player == 'paper') return (comp == 'rock')?'WIN':'LOSE';
+//     if(player == 'scissor') return (comp == 'rock')?'LOSE':'WIN';
 // }
 
 const pilihan = document.querySelectorAll('li img');
 pilihan.forEach(function(pil){
     pil.addEventListener('click', function(){
-        const pilihanComputer = getPilihanComputer();
-        const pilihanPlayer = pil.className;
-        const hasil = getHasil(pilihanComputer, pilihanPlayer);
+        const computerChoice = getComputerChoice();
+        const playerChoice = pil.className;
+        const result = getResult(computerChoice, playerChoice);
         const imgComputer = document.querySelector('.img-komputer')
-        imgComputer.setAttribute('src', '../assets/' + pilihanComputer + '.png');
+        imgComputer.setAttribute('src', '../assets/' + computerChoice + '.png');
 
         const info = document.querySelector('.info');
-        info.innerHTML = hasil;
+        info.innerHTML = result;
     })
 })

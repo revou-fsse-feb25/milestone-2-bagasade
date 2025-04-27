@@ -183,17 +183,17 @@ img {
     border-radius: 50%;
 }
 
-.batu, .kertas, .gunting {
+.rock, .paper, .scissor {
     transition: .3s;
     position: relative;
     top:0;
     cursor: pointer;
 }
 
-.batu:hover, .gunting:hover, .kertas:hover, .active {
+.rock:hover, .scissor:hover, .paper:hover, .active {
     box-shadow: 0 0 10px 5px yellow;
 }
 
-.batu:active, .gunting:active, .kertas:active {
+.rock:active, .scissor:active, .paper:active {
     top: 2px;
 }
